@@ -5,7 +5,7 @@ use Laravel\Jetstream\Features;
 use Laravel\Jetstream\Http\Livewire\DeleteUserForm;
 use Livewire\Livewire;
 
-test('user accounts can be deleted', function () {
+test('users accounts can be deleted', function () {
     $this->actingAs($user = User::factory()->create());
 
     Livewire::test(DeleteUserForm::class)

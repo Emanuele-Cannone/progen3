@@ -27,7 +27,7 @@ class RemoveTeamMember implements RemovesTeamMembers
     }
 
     /**
-     * Authorize that the user can remove the team member.
+     * Authorize that the users can remove the team member.
      */
     protected function authorize(User $user, Team $team, User $teamMember): void
     {
@@ -38,7 +38,7 @@ class RemoveTeamMember implements RemovesTeamMembers
     }
 
     /**
-     * Ensure that the currently authenticated user does not own the team.
+     * Ensure that the currently authenticated users does not own the team.
      */
     protected function ensureUserDoesNotOwnTeam(User $teamMember, Team $team): void
     {

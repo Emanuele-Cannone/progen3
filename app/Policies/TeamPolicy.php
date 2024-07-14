@@ -11,7 +11,7 @@ class TeamPolicy
     use HandlesAuthorization;
 
     /**
-     * Determine whether the user can view any models.
+     * Determine whether the users can view any models.
      */
     public function viewAny(User $user): bool
     {
@@ -19,7 +19,7 @@ class TeamPolicy
     }
 
     /**
-     * Determine whether the user can view the model.
+     * Determine whether the users can view the model.
      */
     public function view(User $user, Team $team): bool
     {
@@ -27,7 +27,7 @@ class TeamPolicy
     }
 
     /**
-     * Determine whether the user can create models.
+     * Determine whether the users can create models.
      */
     public function create(User $user): bool
     {
@@ -35,7 +35,7 @@ class TeamPolicy
     }
 
     /**
-     * Determine whether the user can update the model.
+     * Determine whether the users can update the model.
      */
     public function update(User $user, Team $team): bool
     {
@@ -43,7 +43,7 @@ class TeamPolicy
     }
 
     /**
-     * Determine whether the user can add team members.
+     * Determine whether the users can add team members.
      */
     public function addTeamMember(User $user, Team $team): bool
     {
@@ -51,7 +51,7 @@ class TeamPolicy
     }
 
     /**
-     * Determine whether the user can update team member permissions.
+     * Determine whether the users can update team member permissions.
      */
     public function updateTeamMember(User $user, Team $team): bool
     {
@@ -59,7 +59,7 @@ class TeamPolicy
     }
 
     /**
-     * Determine whether the user can remove team members.
+     * Determine whether the users can remove team members.
      */
     public function removeTeamMember(User $user, Team $team): bool
     {
@@ -67,7 +67,7 @@ class TeamPolicy
     }
 
     /**
-     * Determine whether the user can delete the model.
+     * Determine whether the users can delete the model.
      */
     public function delete(User $user, Team $team): bool
     {

@@ -18,6 +18,8 @@
     },
     "dependencies": {
         "@ryangjchandler/alpine-clipboard": "^2.3.0",
-        "flatpickr": "^4.6.13"
+        "flatpickr": "^4.6.13",
+        "jquery": "^3.7.1",
+        "select2": "^4.1.0-rc.0"
     }
 }
