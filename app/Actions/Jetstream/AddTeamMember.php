@@ -44,7 +44,7 @@ class AddTeamMember implements AddsTeamMembers
             'email' => $email,
             'role' => $role,
         ], $this->rules(), [
-            'email.exists' => __('We were unable to find a registered user with this email address.'),
+            'email.exists' => __('We were unable to find a registered users with this email address.'),
         ])->after(
             $this->ensureUserIsNotAlreadyOnTeam($team, $email)
         )->validateWithBag('addTeamMember');
@@ -58,7 +58,7 @@ class AddTeamMember implements AddsTeamMembers
     protected function rules(): array
     {
         return array_filter([
-            'email' => ['required', 'email', 'exists:user'],
+            'email' => ['required', 'email', 'exists:users'],
             'role' => Jetstream::hasRoles()
                             ? ['required', 'string', new Role]
                             : null,
@@ -66,7 +66,7 @@ class AddTeamMember implements AddsTeamMembers
     }
 
     /**
-     * Ensure that the user is not already on the team.
+     * Ensure that the users is not already on the team.
      */
     protected function ensureUserIsNotAlreadyOnTeam(Team $team, string $email): Closure
     {
@@ -74,7 +74,7 @@ class AddTeamMember implements AddsTeamMembers
             $validator->errors()->addIf(
                 $team->hasUserWithEmail($email),
                 'email',
-                __('This user already belongs to the team.')
+                __('This users already belongs to the team.')
             );
         };
     }
